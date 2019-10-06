@@ -24,6 +24,9 @@ h6 {
   padding: 10px;
   margin: 15px;
 }
+.invite {
+  margin: 10px;
+}
 #header {
   background: white;
   position: fixed;
