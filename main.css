@@ -3,8 +3,13 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
+  background: #393939;
   font-family: "Montserrat", sans-serif;
+  color: white;
 }
 h1,
 h2,
@@ -44,6 +49,9 @@ h6 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+.nav-link {
+  padding: 0;
+}
 #header nav a:hover {
   border-bottom: 4px black solid;
 }
@@ -52,12 +60,14 @@ a {
   color: black;
 }
 main {
+  color: black;
+  z-index: -1;
   padding: 50px;
   padding-top: 150px;
   text-align: center;
   font-size: 25px;
   min-height: 450px;
-  background: rgb(83, 238, 153);
+  background: linear-gradient(45deg, rgb(220, 235, 7), rgb(233, 26, 223));
   font-weight: bold;
 }
 main .guilds_no {
@@ -86,7 +96,7 @@ main hr {
   margin: 20px;
   padding: 20px;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
 }
 .container {
   display: grid;
@@ -96,6 +106,14 @@ main hr {
   margin: 35px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  -webkit-box-shadow: 0px 0px 17px 2px #000000;
+  box-shadow: 0px 0px 17px 2px #000000;
+  text-align: center;
+  transition: 1s;
+}
+.card img {
+  width: 400px;
+  height: 300px;
 }
 .card p i {
   font-size: 80px;
@@ -129,4 +147,52 @@ footer {
 .contact a:hover {
   margin-bottom: 0px;
   transform: scale(1.3);
+}
+
+.btn {
+  color: orangered;
+  cursor: pointer;
+}
+main {
+  background-color: red;
+  margin-top: 50px;
+  padding: 5px 40px;
+
+  -webkit-transform: skewX(-10deg);
+  -moz-transform: skewX(-10deg);
+  -ms-transform: skewX(-10deg);
+  -o-transform: skewX(-10deg);
+  transform: skewX(-10deg);
+}
+
+main > .wrapper {
+  background: linear-gradient(45deg, rgb(7, 235, 110), rgb(26, 181, 233));
+  r-webkit-transform: skewX(10deg);
+  -moz-transform: skewX(10deg);
+  -ms-transform: skewX(10deg);
+  -o-transform: skewX(10deg);
+  transform: skewX(10deg);
+}
+
+.top-gap {
+  margin-top: 100px;
+}
+
+.highlight {
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  #card,
+  #features {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.card-hr {
+  margin: 30px;
 }
